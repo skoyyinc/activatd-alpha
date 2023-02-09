@@ -1,0 +1,232 @@
+:root {
+    --main:#103082;
+    --mid : #1E51C8;
+    --light : #4072E2;
+    --mblack : #232328;
+}
+
+
+
+
+body {
+    font-family: "Poppins",sans-serif;
+    
+}
+
+h1,h2,h3,h4,h5,p {
+  color: var(--mblack)
+}
+
+p{
+  font-size: 0.9em;
+}
+
+.text-mid {
+  color:var(--mid)!important
+}
+
+.text-main {
+  color:var(--main)!important
+}
+
+.text-light {
+  color:var(--main)!important
+}
+
+section {
+    padding: 0 10%;
+}
+
+.underline{
+
+  border-bottom: 4px solid var(--mid);
+  
+
+}
+
+.custom-btn {
+  font-size: .9em;
+  border: 2px solid var(--main);
+  font-weight: 400;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  }
+
+.btn-main {
+  background: var(--main);
+  color: #fff;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-main span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-main:before,
+.btn-main:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 2px;
+  background: var(--main);
+}
+.btn-main:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.btn-main:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.btn-main:hover{
+  color: var(--main);
+  background: transparent;
+}
+.btn-main:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-main:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-main span:before,
+.btn-main span:after {
+  position: absolute;
+  content: "";
+  background: var(--main);
+}
+.btn-main span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 2px;
+  transition: all 500ms ease;
+}
+.btn-main span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  transition: all 500ms ease;
+}
+.btn-main span:hover:before {
+  width: 100%;
+}
+.btn-main span:hover:after {
+  width: 100%;
+}
+
+/* Button Hero */
+.btn-hero {
+  line-height: 39px;
+  padding: 0;
+  color:var(--mid);
+  border-color:var(--mid);
+}
+.btn-hero:hover{
+  background: transparent;
+  color: var(--mid);
+}
+.btn-hero span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-hero:before,
+.btn-hero:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: var(--mid);
+  transition: all 0.3s ease;
+}
+.btn-hero:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-hero:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-hero:hover:before {
+  height: 100%;
+}
+.btn-hero:hover:after {
+  width: 100%;
+}
+.btn-hero span:before,
+.btn-hero span:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: var(--mid);
+  transition: all 0.3s ease;
+}
+.btn-hero span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-hero span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-hero span:hover:before {
+  height: 100%;
+}
+.btn-hero span:hover:after {
+  width: 100%;
+}
+
+ 
+.expand {
+  position: relative;
+}
+
+
+.expand::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 0;
+  background-color: var(--main);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .4s ease-in-out;
+}
+
+.expand:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.about-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-card:hover{
+  transform: translateY(8px);
+}
+
+
+.btn-social {
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-social:hover{
+  transform: translateY(-4px)
+}
